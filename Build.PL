@@ -1,0 +1,40 @@
+{ use 5.011002; }
+use warnings;
+use strict;
+
+use Module::Build;
+
+Module::Build->new(
+	module_name => "Lexical::Import",
+	dist_version => "0.000",
+	license => "perl",
+	configure_requires => {
+		"Module::Build" => 0,
+		"perl" => "5.011002",
+	},
+	build_requires => {
+		"ExtUtils::CBuilder" => "0.15",
+		"Module::Build" => 0,
+		"Test::More" => 0,
+		"perl" => "5.011002",
+		"strict" => 0,
+		"warnings" => 0,
+	},
+	requires => {
+		"Carp" => 0,
+		"Lexical::Var" => "0.003",
+		"Module::Runtime" => "0.007",
+		"Params::Classify" => 0,
+		"XSLoader" => 0,
+		"perl" => "5.011002",
+		"strict" => 0,
+		"warnings" => 0,
+		"version" => "0.81",
+	},
+	dynamic_config => 0,
+	meta_add => { distribution_type => "module" },
+	create_makefile_pl => "passthrough",
+	sign => 1,
+)->create_build_script;
+
+1;

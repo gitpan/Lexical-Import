@@ -1,0 +1,39 @@
+---
+abstract: 'clean imports from package-exporting modules'
+author:
+  - 'Andrew Main (Zefram) <zefram@fysh.org>'
+build_requires:
+  ExtUtils::CBuilder: 0.15
+  Module::Build: 0
+  Test::More: 0
+  perl: 5.011002
+  strict: 0
+  warnings: 0
+configure_requires:
+  Module::Build: 0
+  perl: 5.011002
+distribution_type: module
+dynamic_config: 0
+generated_by: 'Module::Build version 0.3603'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Lexical-Import
+provides:
+  Lexical::Import:
+    file: lib/Lexical/Import.pm
+    version: 0.000
+requires:
+  Carp: 0
+  Lexical::Var: 0.003
+  Module::Runtime: 0.007
+  Params::Classify: 0
+  XSLoader: 0
+  perl: 5.011002
+  strict: 0
+  version: 0.81
+  warnings: 0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.000
