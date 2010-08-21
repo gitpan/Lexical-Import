@@ -6,15 +6,18 @@ build_requires:
   ExtUtils::CBuilder: 0.15
   Module::Build: 0
   Test::More: 0
+  constant: 0
   perl: 5.011002
   strict: 0
   warnings: 0
 configure_requires:
   Module::Build: 0
   perl: 5.011002
+  strict: 0
+  warnings: 0
 distribution_type: module
 dynamic_config: 0
-generated_by: 'Module::Build version 0.3603'
+generated_by: 'Module::Build version 0.3607'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,7 +26,7 @@ name: Lexical-Import
 provides:
   Lexical::Import:
     file: lib/Lexical/Import.pm
-    version: 0.000
+    version: 0.001
 requires:
   Carp: 0
   Lexical::Var: 0.003
@@ -36,4 +39,4 @@ requires:
   warnings: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.000
+version: 0.001

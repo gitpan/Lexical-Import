@@ -16,6 +16,8 @@ sub import {
 			*{"${importer}::foo"} = sub () { "FOO" };
 		} elsif($_ eq "bar") {
 			Lexical::Var->import("&bar" => sub () { "BAR" });
+		} elsif($_ eq "baz") {
+			eval "package $importer; use constant baz => 'BAZ';";
 		} else {
 			die "$_ is not exported by the $exporter module";
 		}

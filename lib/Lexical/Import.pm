@@ -56,7 +56,7 @@ use Module::Runtime 0.007 qw($module_name_rx require_module);
 use Params::Classify 0.000 qw(is_string is_ref);
 use version 0.81 ();
 
-our $VERSION = "0.000";
+our $VERSION = "0.001";
 
 require XSLoader;
 XSLoader::load(__PACKAGE__, $VERSION);

@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 64;
+use Test::More tests => 67;
 
 our($blank, $one, $three) = qw(z z z);
 ($main::zero, $main::two) = qw(z z);
@@ -51,11 +51,11 @@ ok \$three == \$main::three;
 
 {
 	use Lexical::Import qw(t::Exp0 :letters);
-	is A(), "AA";
-	is B(), "BB";
-	is C(), "CC";
-	is D(), "DD";
-	is E(), "EE";
+	is(A(), "AA");
+	is(B(), "BB");
+	is(C(), "CC");
+	is(D(), "DD");
+	is(E(), "EE");
 }
 
 {
@@ -120,14 +120,17 @@ like $@, qr/\A(?:Modification\ of\ a\ read-only\ value\ attempted
 	use Lexical::Import qw(t::Exp1);
 	ok !defined(&foo);
 	ok !defined(&bar);
+	ok !defined(&baz);
 }
 
 {
-	use Lexical::Import qw(t::Exp1 foo bar);
+	use Lexical::Import qw(t::Exp1 foo bar baz);
 	ok defined(&foo);
 	ok defined(&bar);
+	ok defined(&baz);
 	is foo(), "FOO";
 	is bar(), "BAR";
+	is baz(), "BAZ";
 }
 
 ok !grep { /\A__STAGE/ } keys %Lexical::Import::;

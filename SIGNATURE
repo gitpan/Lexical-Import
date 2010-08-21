@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.61.
+signed via the Module::Signature module, version 0.64.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -15,27 +15,27 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 44bccc140beef1f8fc1b56468cfbd4cbb105582f .cvsignore
-SHA1 f70344e5763ccbbb9e88ce2fb9a13e2b160c6861 Build.PL
-SHA1 a7940b26a457b0938c4590275569678e04e7ffd8 Changes
+SHA1 7c19999eb5204fa0720da96e3ab32f82819a5cb2 Build.PL
+SHA1 1f9d09dd6e02488a9eedc46534645d03e24ff1a6 Changes
 SHA1 1e3289194e757b8338f74c9ab1ece7be28e886dc MANIFEST
-SHA1 7cd85e73e5477ac89e17b6031f6ce4511f2daed2 META.yml
-SHA1 1bb2ca000b6a2871341ad9ee2174b59fc5fc85a2 Makefile.PL
+SHA1 5d24dee0ae3a0ddfb1c8ad0b56dddbe36f194961 META.yml
+SHA1 977e35650babe2c95adaefddaf1fd10a02f293eb Makefile.PL
 SHA1 b39388489fd72224525267fc3e196551c0e6bf67 README
 SHA1 7171a5631ef21f73081e1542546d399cc363ed21 lib/Lexical/.cvsignore
-SHA1 e4958e6cc8a7ce74a8595fb03b2284a02b2e06d0 lib/Lexical/Import.pm
-SHA1 f5e38b3b4d33b655799721b98b448088ece8f16f lib/Lexical/Import.xs
+SHA1 a15a710e26340ba388bded4f6cf3f4c03b1bc9e7 lib/Lexical/Import.pm
+SHA1 3e1a67d49bcf70da61d0aff522810ec64b82cbdd lib/Lexical/Import.xs
 SHA1 baeb8ea7835c7366cb55546287d805e7368aa1b2 t/Exp0.pm
-SHA1 9b21399a816a9d5d962b5f350edc827602563dd0 t/Exp1.pm
+SHA1 d91917481f87a3e817a21d03a0d197672a0f56c4 t/Exp1.pm
 SHA1 51938e01f87705d73ef58113a7e1e37302d39698 t/error.t
 SHA1 c4df1a0c96f1d1809fbbcc6885eba1718957acc4 t/group.t
-SHA1 6661492810a38e852d2f2e9a85944c4cc3882715 t/import.t
-SHA1 0e141eecf3ca4903ef38d9413b5403a9ddb0392f t/pod_cvg.t
-SHA1 74a957cd8b93f25672ecc6aa578a671d084dd343 t/pod_syn.t
+SHA1 f7e4de6d3038cb47a82acabfab030d0a0f02dc9b t/import.t
+SHA1 904d9a4f76525e2303e4b0c168c68230f223c8de t/pod_cvg.t
+SHA1 65c75abdef6f01a5d1588a307f2ddfe2333dc961 t/pod_syn.t
 SHA1 d18685e31f33c490bc86c30f319688962f031bfd t/version.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.9 (GNU/Linux)
 
-iEYEARECAAYFAkuksG0ACgkQOV9mt2VyAVEKSwCbBVtX+cZ46MHa/7iYKDmlYwy0
-ONwAn1II1lZmGeIKL3xFNs06arvNGFZN
-=oo+c
+iEYEARECAAYFAkxvfyMACgkQOV9mt2VyAVFOxwCgpVya44JTWgL97Ax4DSo7mzoS
+QGoAnA7rM3ZV2t6l9tATJv9b5BjsjKwP
+=F3RQ
 -----END PGP SIGNATURE-----

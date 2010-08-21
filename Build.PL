@@ -6,16 +6,18 @@ use Module::Build;
 
 Module::Build->new(
 	module_name => "Lexical::Import",
-	dist_version => "0.000",
 	license => "perl",
 	configure_requires => {
 		"Module::Build" => 0,
 		"perl" => "5.011002",
+		"strict" => 0,
+		"warnings" => 0,
 	},
 	build_requires => {
 		"ExtUtils::CBuilder" => "0.15",
 		"Module::Build" => 0,
 		"Test::More" => 0,
+		"constant" => 0,
 		"perl" => "5.011002",
 		"strict" => 0,
 		"warnings" => 0,
