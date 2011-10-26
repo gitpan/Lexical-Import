@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 67;
+use Test::More tests => 71;
 
 our($blank, $one, $three) = qw(z z z);
 ($main::zero, $main::two) = qw(z z);
@@ -132,6 +132,19 @@ like $@, qr/\A(?:Modification\ of\ a\ read-only\ value\ attempted
 	is bar(), "BAR";
 	is baz(), "BAZ";
 }
+
+{
+	use Lexical::Import qw(t::Exp2);
+	ok !defined(&identity);
+}
+
+{
+	use Lexical::Import qw(-t::Exp2);
+	ok defined(&identity);
+	is identity(3), 3;
+}
+
+ok !defined(&identity);
 
 ok !grep { /\A__STAGE/ } keys %Lexical::Import::;
 

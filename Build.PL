@@ -24,8 +24,8 @@ Module::Build->new(
 	},
 	requires => {
 		"Carp" => 0,
-		"Lexical::Var" => "0.003",
-		"Module::Runtime" => "0.007",
+		"Lexical::Var" => "0.006",
+		"Module::Runtime" => "0.011",
 		"Params::Classify" => 0,
 		"XSLoader" => 0,
 		"perl" => "5.011002",

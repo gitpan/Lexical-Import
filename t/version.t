@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 6;
+use Test::More tests => 11;
 
 eval q{
 	use Lexical::Import qw(t::Exp1-1.00 foo);
@@ -38,5 +38,36 @@ eval q{
 	die unless successor(5) == 6;
 };
 like $@, qr/\At::Exp0 does not define \$t::Exp0::VERSION--/;
+
+eval q{
+	use Lexical::Import qw(t::Exp2);
+	die if defined(&successor);
+	die if defined(&predecessor);
+};
+is $@, "";
+
+eval q{
+	use Lexical::Import qw(t::Exp2-0);
+};
+like $@, qr/\Aunrecognised version for importation/;
+
+eval q{
+	use Lexical::Import qw(t::Exp2-1);
+	die unless successor(5) == 6;
+	die if defined(&predecessor);
+};
+is $@, "";
+
+eval q{
+	use Lexical::Import qw(t::Exp2-2);
+	die if defined(&successor);
+	die unless predecessor(6) == 5;
+};
+is $@, "";
+
+eval q{
+	use Lexical::Import qw(t::Exp2-3);
+};
+like $@, qr/\Aunrecognised version for importation/;
 
 1;

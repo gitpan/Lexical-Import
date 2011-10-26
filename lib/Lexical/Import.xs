@@ -5,8 +5,11 @@
 
 MODULE = Lexical::Import PACKAGE = Lexical::Import
 
+PROTOTYPES: DISABLE
+
 bool
 _glob_has_scalar(SV *gvref)
+PROTOTYPE: $
 PREINIT:
 	GV *gv;
 CODE:
